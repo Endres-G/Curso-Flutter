@@ -1,3 +1,3 @@
 # teste_app
 
-Começando a estudar e aprender Flutter
+Aprendendo a funcionalidade de Widget e statelessWidget
