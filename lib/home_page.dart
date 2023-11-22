@@ -16,17 +16,68 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Home Page"),
+        actions: [CustomSwitch()],
       ),
-      body: Center(
-        child: Switch(
-          value: AppController.instance.isDarkTheme,
-          onChanged: (value) {
-            setState(() {
-              AppController.instance.changeTheme();
-            });
-            ;
-          },
-        ),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: ListView(
+            //mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 50,
+                    height: 80,
+                    color: Colors.black,
+                  ),
+                  Container(
+                    width: 50,
+                    height: 80,
+                    color: Colors.yellow,
+                  ),
+                  Container(
+                    width: 50,
+                    height: 80,
+                    color: Colors.red,
+                  )
+                ],
+              ),
+              Container(
+                height: 50,
+              ),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              CustomSwitch(),
+              Text("Contador: $count"),
+            ]),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
@@ -37,5 +88,18 @@ class HomePageState extends State<HomePage> {
         },
       ),
     );
+  }
+}
+
+class CustomSwitch extends StatelessWidget {
+  const CustomSwitch({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Switch(
+        value: AppController.instance.isDarkTheme,
+        onChanged: (value) {
+          AppController.instance.changeTheme();
+        });
   }
 }
