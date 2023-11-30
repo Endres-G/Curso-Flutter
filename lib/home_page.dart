@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:teste_app/app_controller.dart';
 
@@ -14,6 +16,31 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: Column(children: [
+          UserAccountsDrawerHeader(
+              currentAccountPicture: ClipRRect(
+                borderRadius: BorderRadius.circular(40),
+                child: Image.network(
+                    "https://static.gameloop.com/img/d269c5a56a9f448f3d99dad86f06166b.png?imageMogr2/thumbnail/172.8x172.8/format/webp"),
+              ),
+              accountName: Text("Gabriel"),
+              accountEmail: Text("1")),
+          ListTile(
+            leading: Icon(Icons.home),
+            title: Text("inicio"),
+            subtitle: Text("epaa"),
+          ),
+          ListTile(
+            leading: Icon(Icons.home),
+            title: Text("Logout"),
+            subtitle: Text("encerrar sessão"),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed('/');
+            },
+          ),
+        ]),
+      ),
       appBar: AppBar(
         title: Text("Home Page"),
         actions: [CustomSwitch()],
@@ -47,31 +74,6 @@ class HomePageState extends State<HomePage> {
               Container(
                 height: 50,
               ),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
-              CustomSwitch(),
               CustomSwitch(),
               CustomSwitch(),
               CustomSwitch(),
