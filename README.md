@@ -4,3 +4,4 @@
 07/011/2023 -- Aprendendo MaterialApp, estados (StatefullWidget)
 08/11/2023 -- Aprendendo boas práticas, fracionando os códigos em arquivos separados para organização, manutenção, Scaffold, estruturas do layout, SingleRender, tema Escuro
 22/11/2023 -- Tela de login e mudança de tela
+30/11/2023 -- Camadas, imagens, barra lateral
